@@ -1,1 +1,1 @@
-web: gunicorn swapi.wsgi --log-file -
+web: gunicorn swapi.wsgi:application --log-file -
