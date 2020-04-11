@@ -45,9 +45,6 @@ MIDDLEWARE_CLASSES = (
     'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
-# Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
 
 ROOT_URLCONF = 'swapi.urls'
 
