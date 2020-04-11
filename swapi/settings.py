@@ -44,6 +44,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
+
 ROOT_URLCONF = 'swapi.urls'
 
 WSGI_APPLICATION = 'swapi.wsgi.application'
@@ -70,6 +74,8 @@ if not DEBUG:
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']
+
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -168,3 +174,4 @@ CACHES = memcacheify()
 
 
 APPEND_SLASH = True
+
