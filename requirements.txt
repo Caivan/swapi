@@ -25,4 +25,5 @@ requests==2.5.1
 six==1.8.0
 stripe==1.19.1
 whitenoise==4.0.0
+#patterns==
 #wsgiref==0.1.2
