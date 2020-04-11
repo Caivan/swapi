@@ -1,2 +1,2 @@
-web: gunicorn swapi.wsgi:application --log-file -
-web: gunicorn --log-file=- swapi.wsgi:application
+web: gunicorn swapi.wsgi:application --log-file --preload
+web: gunicorn --log-file=- swapi.wsgi:application --preload
