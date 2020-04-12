@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from django.urls import path, include
+from django.conf.urls import path, include, url
 from django.contrib import admin
 admin.autodiscover()
 
