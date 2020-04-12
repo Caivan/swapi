@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from django.conf.urls.defaults import patterns, url, include
+from django.conf.urls import patterns, url, include
 from django.contrib import admin
 admin.autodiscover()
 
@@ -18,7 +18,7 @@ router.register(r"vehicles", views.VehicleViewSet)
 router.register(r"starships", views.StarshipViewSet)
 
 
-urlpatterns = patterns("",
+urlpatterns = ["",
     url(r"^admin/", include(admin.site.urls)),
     url(r"^$", "swapi.views.index"),
     url(r"^documentation$", "swapi.views.documentation"),
@@ -32,4 +32,4 @@ urlpatterns = patterns("",
     url(r"^api/vehicles/schema$", "resources.schemas.vehicles"),
     url(r"^api/starships/schema$", "resources.schemas.starships"),
     url(r"^api/", include(router.urls)),
-)
+]
